@@ -1,0 +1,8 @@
+FIX:
+- Multiplayer
+TBD:
+- Bullet hell
+- Rogelike
+- Dungeon crawler
+- Open world exploration
+- 2D top down
