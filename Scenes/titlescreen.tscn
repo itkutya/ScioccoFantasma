@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/titlescreen.gd" id="1_mykpq"]
 [ext_resource type="Texture2D" uid="uid://c3c78tpt0g0lx" path="res://Textures/467302757_621994370161669_1258008595267831897_n.jpg" id="1_uqqsk"]
 [ext_resource type="Texture2D" uid="uid://5iemco4b0dxw" path="res://Textures/AAAAA.png" id="2_urln7"]
-[ext_resource type="PackedScene" uid="uid://cxxl07w4noxq7" path="res://Scripts/settingsmenu.tscn" id="4_0mhyb"]
+[ext_resource type="PackedScene" uid="uid://cxxl07w4noxq7" path="res://Scenes/Settings/settingsmenu.tscn" id="4_0mhyb"]
 
 [node name="Titlescreen" type="Control"]
 layout_mode = 3
