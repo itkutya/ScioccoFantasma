@@ -22,7 +22,7 @@ size_flags_stretch_ratio = 10.0
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_vertical = 0
 theme_override_font_sizes/font_size = 20
 text = "Input"
 vertical_alignment = 1
