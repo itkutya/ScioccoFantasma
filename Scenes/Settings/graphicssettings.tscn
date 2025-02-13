@@ -13,51 +13,37 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_gdj5p")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 3
-
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 20
-text = "Graphics"
-vertical_alignment = 1
-
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
-layout_mode = 2
+offset_right = 1440.0
+offset_bottom = 800.0
 size_flags_vertical = 3
 theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 6
 theme_override_constants/separation = 20
 
-[node name="Label" type="Label" parent="VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
 theme_override_font_sizes/font_size = 20
 text = "Window mode"
-horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="WindowMode" type="OptionButton" parent="VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="WindowMode" type="OptionButton" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 2
-size_flags_vertical = 6
+size_flags_vertical = 4
 theme_override_font_sizes/font_size = 20
 selected = 0
 item_count = 3
@@ -67,21 +53,19 @@ popup/item_1/id = 1
 popup/item_2/text = "Borderless"
 popup/item_2/id = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 6
 theme_override_constants/separation = 20
 
-[node name="Label" type="Label" parent="VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-size_flags_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
 theme_override_font_sizes/font_size = 20
 text = "VSync"
-horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VSync" type="OptionButton" parent="VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="VSync" type="OptionButton" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 2
@@ -97,21 +81,19 @@ popup/item_2/id = 2
 popup/item_3/text = "Mailbox"
 popup/item_3/id = 3
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 6
 theme_override_constants/separation = 20
 
-[node name="Label" type="Label" parent="VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer3"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
-size_flags_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
 theme_override_font_sizes/font_size = 20
 text = "MSAA"
-horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MSAA" type="OptionButton" parent="VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer3"]
+[node name="MSAA" type="OptionButton" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 2
@@ -127,24 +109,44 @@ popup/item_2/id = 2
 popup/item_3/text = "8x"
 popup/item_3/id = 3
 
-[node name="TAA" type="CheckButton" parent="VBoxContainer/MarginContainer/VBoxContainer"]
-unique_name_in_owner = true
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 6
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
 theme_override_font_sizes/font_size = 20
 text = "TAA"
+vertical_alignment = 1
 
-[node name="FXAA" type="CheckButton" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+[node name="TAA" type="CheckButton" parent="MarginContainer/VBoxContainer/HBoxContainer4"]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 6
+size_flags_horizontal = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
 theme_override_font_sizes/font_size = 20
 text = "FXAA"
+vertical_alignment = 1
 
-[connection signal="item_selected" from="VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/WindowMode" to="." method="_on_window_mode_item_selected"]
-[connection signal="item_selected" from="VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2/VSync" to="." method="_on_v_sync_item_selected"]
-[connection signal="item_selected" from="VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer3/MSAA" to="." method="_on_msaa_item_selected"]
-[connection signal="toggled" from="VBoxContainer/MarginContainer/VBoxContainer/TAA" to="." method="_on_taa_toggled"]
-[connection signal="toggled" from="VBoxContainer/MarginContainer/VBoxContainer/FXAA" to="." method="_on_fxaa_toggled"]
+[node name="FXAA" type="CheckButton" parent="MarginContainer/VBoxContainer/HBoxContainer5"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_font_sizes/font_size = 20
+
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/HBoxContainer/WindowMode" to="." method="_on_window_mode_item_selected"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/HBoxContainer2/VSync" to="." method="_on_v_sync_item_selected"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/HBoxContainer3/MSAA" to="." method="_on_msaa_item_selected"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/HBoxContainer4/TAA" to="." method="_on_taa_toggled"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/HBoxContainer5/FXAA" to="." method="_on_fxaa_toggled"]

@@ -24,7 +24,6 @@ DebugMenu="*res://addons/debug_menu/debug_menu.tscn"
 
 window/size/viewport_width=1440
 window/size/viewport_height=800
-window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
 [editor_plugins]

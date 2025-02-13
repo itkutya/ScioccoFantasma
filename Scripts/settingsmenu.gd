@@ -5,16 +5,16 @@ class_name SettingsMenu extends Control
 func set_input(input: bool) -> void:
 	if input:
 		$".".set_mouse_filter(Control.MOUSE_FILTER_STOP)
-		%GraphicsSettings.focus_mode = FOCUS_ALL
-		%AudioSettings.focus_mode = FOCUS_ALL
-		%InputSettings.focus_mode = FOCUS_ALL
+		%Graphics.focus_mode = FOCUS_ALL
+		%Audio.focus_mode = FOCUS_ALL
+		%Input.focus_mode = FOCUS_ALL
 		%SaveButton.focus_mode = FOCUS_ALL
 		%CloseButton.focus_mode = FOCUS_ALL
 	else:
 		$".".set_mouse_filter(Control.MOUSE_FILTER_IGNORE)
-		%GraphicsSettings.focus_mode = FOCUS_NONE
-		%AudioSettings.focus_mode = FOCUS_NONE
-		%InputSettings.focus_mode = FOCUS_NONE
+		%Graphics.focus_mode = FOCUS_NONE
+		%Audio.focus_mode = FOCUS_NONE
+		%Input.focus_mode = FOCUS_NONE
 		%SaveButton.focus_mode = FOCUS_NONE
 		%CloseButton.focus_mode = FOCUS_NONE
 
